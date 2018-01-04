@@ -8,7 +8,7 @@ You have to mount your image folder into **/app** directory.
 **Example :**
 
 ```
-docker run --rm -v "$( pwd ):/app" raffael/imagemagick magick convert myPic.jpg -resize '300x300>' myResizedPic.jpg
+docker run --rm -v "$( pwd ):/app" rafffael/imagemagick magick convert myPic.jpg -resize '300x300>' myResizedPic.jpg
 ```
 
 ## Get help
@@ -16,7 +16,7 @@ docker run --rm -v "$( pwd ):/app" raffael/imagemagick magick convert myPic.jpg 
 If you run the container without any option help will be shown.
 
 ```
-docker run --rm raffael/imagemagick
+docker run --rm rafffael/imagemagick
 ```
 
 ## Multiple file
@@ -24,5 +24,5 @@ docker run --rm raffael/imagemagick
 **Example :** Resize all JPEG files to 300x300 max 
 
 ```
-find $pwd -type f -name '*.jpeg' -o -name '*.jpg' -exec docker run --rm -v "$( pwd ):/app" raffael/imagemagick magick convert {} -resize "300x300>" {} \;
+find $pwd -type f -name '*.jpeg' -o -name '*.jpg' -exec docker run --rm -v "$( pwd ):/app" rafffael/imagemagick magick convert {} -resize "300x300>" {} \;
 ```
